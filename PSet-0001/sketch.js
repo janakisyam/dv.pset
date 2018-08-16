@@ -1,22 +1,28 @@
 function setup()
 {
   createCanvas(800,800);
-  strokeWeight(2);
   noFill();
+  strokeWeight(2);
 }
-var w=100,h=100,x=0,x,y=400;
+var w=800, x=100,speed=10;
+
 function draw()
 {
-
-  translate(200,200);
-
-while(x>=1 || x<=399)
-  {
-    ellipse(x1,y,100,100);
-    x = x+10;
-    clear();
-
-
-  }
-
+  translate(0,200);
+   clear();
+   x = x+speed;
+   ellipse(x,200,100,100);
+   //x=x+speed;
+   if(x<1 || x>700)
+    {
+      speed = speed - 1;
+    }
+    /*if(x<1)
+    {
+      speed=speed+1;
+    }
+    if(x>799)
+    {
+      speed= speed-1;
+    }*/
 }
