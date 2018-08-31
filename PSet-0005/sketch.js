@@ -14,8 +14,12 @@ function draw()
    ellipse(x,200,100,100);
    ellipse(600-x,200,100,100);
    x = x + speed;
-   if(x<0 || x>600)
+   if(x>600)
    {
      speed = speed - 1;
+   }
+   else if (x<1)
+   {
+     speed = speed + 1;
    }
 }
